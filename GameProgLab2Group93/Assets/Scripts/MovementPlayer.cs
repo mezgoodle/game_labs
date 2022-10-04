@@ -21,15 +21,15 @@ public class MovementPlayer : MonoBehaviour
     [SerializeField]
     private float gravity = -9.81f;
 
-    private void Start() 
+    private void Start()
     {
         controller = GetComponent<CharacterController>();
     }
 
-    private void Update() 
+    private void Update()
     {
         isGrounded = controller.isGrounded;
-        if (isGrounded && velocity.y < 0) 
+        if (isGrounded && velocity.y < 0)
         {
             velocity.y = 0f;
         }
